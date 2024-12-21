@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 80%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #007AFF;
+}
+
+input, select, button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Blinking animations */
+@keyframes blink-slow {
+    50% { border-color: yellow; }
+}
+
+@keyframes blink-medium {
+    50% { border-color: green; }
+}
+
+@keyframes blink-fast {
+    50% { border-color: red; }
+}
+
+/* Priority-specific styles */
+.task.low-priority {
+    border: 2px solid yellow;
+    animation: blink-slow 3s infinite;
+}
+
+.task.medium-priority {
+    border: 2px solid green;
+    animation: blink-medium 2s infinite;
+}
+
+.task.high-priority {
+    border: 2px solid red;
+    animation: blink-fast 1s infinite;
+}
